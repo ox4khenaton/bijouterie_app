@@ -1,0 +1,4 @@
+frappe
+erpnext
+python-barcode
+pillow

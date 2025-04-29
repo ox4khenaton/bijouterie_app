@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font-family: 'Playfair Display', serif; fill: #d4af37; font-size: 24px; }
+    .subtext { font-family: 'Cormorant Garamond', serif; fill: #8b4513; font-size: 14px; }
+    .diamond { fill: #d4af37; }
+  </style>
+  
+  <!-- Diamond icon -->
+  <polygon class="diamond" points="30,10 40,20 30,30 20,20" />
+  
+  <!-- Company name -->
+  <text x="50" y="25" class="text">Bijouterie</text>
+  
+  <!-- Tagline -->
+  <text x="50" y="45" class="subtext">Artisanat d'Or et de Bijoux</text>
+</svg>

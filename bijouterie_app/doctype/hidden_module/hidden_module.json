@@ -1,0 +1,20 @@
+{
+  "name": "Hidden Module",
+  "doctype": "DocType",
+  "module": "Bijouterie App",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "module_name",
+      "label": "Module Name",
+      "fieldtype": "Link",
+      "options": "Module Def",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Small Text"
+    }
+  ]
+}

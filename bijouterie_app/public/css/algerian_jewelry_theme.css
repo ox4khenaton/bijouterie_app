@@ -1,0 +1,198 @@
+/* Custom CSS for Algerian Jewelry Store Theme */
+:root {
+  --primary-color: #d4af37; /* Gold color */
+  --secondary-color: #006233; /* Algerian green */
+  --accent-color: #e6d7b3; /* Light gold */
+  --text-color: #2d2926; /* Dark color for text */
+  --link-color: #006233; /* Algerian green for links */
+  --header-color: #2c2416; /* Very dark brown for headers */
+  --card-bg: #fcf9f2; /* Light cream background */
+  --border-color: #d4af37; /* Gold for borders */
+  --algerian-red: #ce1126; /* Algerian flag red */
+  --algerian-white: #ffffff; /* Algerian flag white */
+}
+
+/* Override ERPNext theme colors */
+.navbar {
+  background-color: var(--secondary-color) !important;
+  border-bottom: 2px solid var(--primary-color) !important;
+}
+
+.navbar-light {
+  background-color: var(--secondary-color) !important;
+  border-bottom: 2px solid var(--primary-color) !important;
+}
+
+.navbar-light .navbar-brand {
+  color: var(--algerian-white) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--algerian-white) !important;
+}
+
+.page-head {
+  background-color: var(--card-bg) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.page-title {
+  color: var(--text-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+  color: var(--algerian-white) !important;
+}
+
+.btn-primary:hover {
+  background-color: #004d29 !important; /* Darker green */
+  border-color: #004d29 !important;
+}
+
+.btn-secondary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.sidebar-item.selected {
+  background-color: var(--secondary-color) !important;
+  color: var(--algerian-white) !important;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25) !important;
+}
+
+.indicator-pill.blue {
+  background-color: var(--secondary-color) !important;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+/* Card styling with Algerian-inspired patterns */
+.widget {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  background-color: var(--card-bg) !important;
+  background-image: linear-gradient(45deg, var(--accent-color) 25%, transparent 25%, transparent 75%, var(--accent-color) 75%, var(--accent-color)), 
+                    linear-gradient(45deg, var(--accent-color) 25%, transparent 25%, transparent 75%, var(--accent-color) 75%, var(--accent-color)) !important;
+  background-size: 60px 60px !important;
+  background-position: 0 0, 30px 30px !important;
+  background-blend-mode: overlay !important;
+  background-opacity: 0.05 !important;
+}
+
+.widget-head {
+  background-color: var(--secondary-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  color: var(--algerian-white) !important;
+}
+
+/* Whitelabel - Hide ERPNext branding */
+.dropdown-item:contains("ERPNext"), 
+.dropdown-item:contains("Frappe"), 
+a:contains("ERPNext"), 
+a:contains("Frappe") {
+  display: none !important;
+}
+
+/* Replace logo */
+.app-logo {
+  content: url('/assets/bijouterie_app/images/algerian_jewelry_logo.svg') !important;
+  height: 30px !important;
+}
+
+/* Custom styling for jewelry-specific elements */
+.gold-price-container {
+  background-color: var(--accent-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  padding: 15px !important;
+}
+
+.gold-price-label {
+  color: var(--secondary-color) !important;
+  font-weight: bold !important;
+}
+
+/* Elegant typography with Arabic support */
+body {
+  font-family: 'Noto Sans', 'Noto Sans Arabic', sans-serif !important;
+  color: var(--text-color) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif', 'Noto Naskh Arabic', serif !important;
+  color: var(--header-color) !important;
+}
+
+/* Add support for Arabic text */
+[dir="rtl"] {
+  font-family: 'Noto Sans Arabic', 'Noto Sans', sans-serif !important;
+}
+
+[dir="rtl"] h1, 
+[dir="rtl"] h2, 
+[dir="rtl"] h3, 
+[dir="rtl"] h4, 
+[dir="rtl"] h5, 
+[dir="rtl"] h6 {
+  font-family: 'Noto Naskh Arabic', 'Noto Serif', serif !important;
+}
+
+/* Algerian-inspired decorative elements */
+.page-head:after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(to right, var(--algerian-green), var(--primary-color), var(--algerian-red)) !important;
+  margin-top: 5px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--card-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Currency formatting for Algerian Dinar */
+.currency-value:after {
+  content: " DA";
+}
+
+/* Add Algerian-inspired decorative elements */
+.section-head:before {
+  content: "☪";
+  color: var(--primary-color);
+  margin-right: 8px;
+}
+
+/* Responsive adjustments for mobile devices common in Algeria */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem !important;
+  }
+  
+  .widget {
+    margin-bottom: 15px !important;
+  }
+}

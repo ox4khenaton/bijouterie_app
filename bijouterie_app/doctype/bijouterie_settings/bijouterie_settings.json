@@ -1,0 +1,70 @@
+{
+  "name": "Bijouterie Settings",
+  "doctype": "DocType",
+  "module": "Bijouterie App",
+  "custom": 1,
+  "is_submittable": 0,
+  "fields": [
+    {
+      "fieldname": "default_gold_warehouse",
+      "label": "Entrepôt par défaut pour l'or",
+      "fieldtype": "Link",
+      "options": "Warehouse",
+      "description": "Entrepôt par défaut pour les articles en or"
+    },
+    {
+      "fieldname": "default_margin_percentage",
+      "label": "Pourcentage de marge par défaut",
+      "fieldtype": "Percent",
+      "default": "20",
+      "description": "Pourcentage de marge par défaut pour les articles en or"
+    },
+    {
+      "fieldname": "module_visibility_section",
+      "label": "Visibilité des modules",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "hidden_modules",
+      "label": "Modules à masquer",
+      "fieldtype": "Table",
+      "options": "Hidden Module",
+      "description": "Liste des modules à masquer dans l'interface ERPNext"
+    },
+    {
+      "fieldname": "whitelabel_section",
+      "label": "Paramètres de Whitelabel",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "hide_erpnext_branding",
+      "label": "Masquer la marque ERPNext",
+      "fieldtype": "Check",
+      "default": "1",
+      "description": "Masquer toutes les références à ERPNext dans l'interface"
+    },
+    {
+      "fieldname": "company_name",
+      "label": "Nom de l'entreprise",
+      "fieldtype": "Data",
+      "default": "Bijouterie",
+      "description": "Nom à afficher à la place d'ERPNext"
+    },
+    {
+      "fieldname": "company_tagline",
+      "label": "Slogan de l'entreprise",
+      "fieldtype": "Data",
+      "default": "Artisanat d'Or et de Bijoux",
+      "description": "Slogan à afficher sous le nom de l'entreprise"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

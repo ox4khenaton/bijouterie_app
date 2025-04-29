@@ -1,0 +1,135 @@
+/* Custom CSS for Jewelry Store Theme */
+:root {
+  --primary-color: #d4af37; /* Gold color */
+  --secondary-color: #8b4513; /* Brown color */
+  --accent-color: #e6d7b3; /* Light gold */
+  --text-color: #4a3c31; /* Dark brown for text */
+  --link-color: #8b4513; /* Brown for links */
+  --header-color: #2c2416; /* Very dark brown for headers */
+  --card-bg: #fcf9f2; /* Light cream background */
+  --border-color: #d4af37; /* Gold for borders */
+}
+
+/* Override ERPNext theme colors */
+.navbar {
+  background-color: var(--header-color) !important;
+}
+
+.navbar-light {
+  background-color: var(--header-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.navbar-light .navbar-brand {
+  color: var(--accent-color) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--accent-color) !important;
+}
+
+.page-head {
+  background-color: var(--card-bg) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.page-title {
+  color: var(--text-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+.sidebar-item.selected {
+  background-color: var(--primary-color) !important;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25) !important;
+}
+
+.indicator-pill.blue {
+  background-color: var(--primary-color) !important;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Card styling */
+.widget {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  background-color: var(--card-bg) !important;
+}
+
+.widget-head {
+  background-color: var(--accent-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Whitelabel - Hide ERPNext branding */
+.dropdown-item:contains("ERPNext"), 
+.dropdown-item:contains("Frappe"), 
+a:contains("ERPNext"), 
+a:contains("Frappe") {
+  display: none !important;
+}
+
+/* Replace logo */
+.app-logo {
+  content: url('/assets/bijouterie_app/images/jewelry_logo.png') !important;
+  height: 30px !important;
+}
+
+/* Custom styling for jewelry-specific elements */
+.gold-price-container {
+  background-color: var(--accent-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  padding: 15px !important;
+}
+
+.gold-price-label {
+  color: var(--secondary-color) !important;
+  font-weight: bold !important;
+}
+
+/* Elegant typography */
+body {
+  font-family: 'Cormorant Garamond', serif !important;
+  color: var(--text-color) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif !important;
+  color: var(--header-color) !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--card-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}

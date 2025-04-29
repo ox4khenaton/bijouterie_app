@@ -1,0 +1,107 @@
+{
+  "name": "Reparation Bijou",
+  "doctype": "DocType",
+  "module": "Bijouterie App",
+  "custom": 1,
+  "is_submittable": 1,
+  "fields": [
+    {
+      "fieldname": "customer",
+      "label": "Client",
+      "fieldtype": "Link",
+      "options": "Customer",
+      "reqd": 1
+    },
+    {
+      "fieldname": "reception_date",
+      "label": "Date de réception",
+      "fieldtype": "Date",
+      "reqd": 1,
+      "default": "Today"
+    },
+    {
+      "fieldname": "jewelry_description",
+      "label": "Description du bijou",
+      "fieldtype": "Text Editor",
+      "reqd": 1
+    },
+    {
+      "fieldname": "jewelry_weight",
+      "label": "Poids (grammes)",
+      "fieldtype": "Float",
+      "precision": 3
+    },
+    {
+      "fieldname": "repair_type",
+      "label": "Type de réparation",
+      "fieldtype": "Select",
+      "options": "Soudure\nRedimensionnement\nPolissage\nRemplacement de pierre\nRéparation fermoir\nAutre",
+      "reqd": 1
+    },
+    {
+      "fieldname": "repair_details",
+      "label": "Détails de la réparation",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "estimated_cost",
+      "label": "Coût estimé",
+      "fieldtype": "Currency",
+      "reqd": 1
+    },
+    {
+      "fieldname": "additional_gold_weight",
+      "label": "Poids d'or ajouté (grammes)",
+      "fieldtype": "Float",
+      "precision": 3,
+      "default": 0
+    },
+    {
+      "fieldname": "status",
+      "label": "Statut",
+      "fieldtype": "Select",
+      "options": "Reçu\nEn cours\nTerminé\nLivré\nAnnulé",
+      "default": "Reçu",
+      "reqd": 1
+    },
+    {
+      "fieldname": "promised_date",
+      "label": "Date de livraison promise",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "delivery_date",
+      "label": "Date de livraison réelle",
+      "fieldtype": "Date",
+      "depends_on": "eval:doc.status=='Livré'"
+    },
+    {
+      "fieldname": "sales_invoice",
+      "label": "Facture",
+      "fieldtype": "Link",
+      "options": "Sales Invoice",
+      "depends_on": "eval:doc.status=='Livré'"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1,
+      "cancel": 1
+    }
+  ]
+}

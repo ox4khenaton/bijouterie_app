@@ -1,0 +1,48 @@
+{
+  "name": "Achat Or Usagé Item",
+  "doctype": "DocType",
+  "module": "Bijouterie App",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "item_description",
+      "label": "Description",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "gold_carat",
+      "label": "Carats",
+      "fieldtype": "Select",
+      "options": "24\n22\n21\n18\n14\n9",
+      "default": "18",
+      "reqd": 1
+    },
+    {
+      "fieldname": "weight",
+      "label": "Poids (grammes)",
+      "fieldtype": "Float",
+      "precision": 3,
+      "reqd": 1
+    },
+    {
+      "fieldname": "purity_factor",
+      "label": "Facteur de pureté",
+      "fieldtype": "Float",
+      "precision": 2,
+      "read_only": 1
+    },
+    {
+      "fieldname": "price_per_gram",
+      "label": "Prix par gramme",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "amount",
+      "label": "Montant",
+      "fieldtype": "Currency",
+      "read_only": 1
+    }
+  ]
+}

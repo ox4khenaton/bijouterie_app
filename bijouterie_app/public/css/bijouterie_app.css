@@ -1,0 +1,46 @@
+.bijouterie-app-style {
+    /* Custom styles for bijouterie app */
+    color: #8B4513;
+}
+
+.gold-price-container {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #f0ad4e;
+    border-radius: 4px;
+    background-color: #fcf8e3;
+}
+
+.gold-price-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item-gold-weight {
+    color: #8a6d3b;
+    font-weight: bold;
+}
+
+.item-barcode {
+    font-family: monospace;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.barcode-container, 
+.barcode-print-container {
+    margin-top: 10px;
+}
+
+.item-selection {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.used-gold-exchange {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}

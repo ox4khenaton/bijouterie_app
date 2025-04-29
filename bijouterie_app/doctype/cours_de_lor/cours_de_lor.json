@@ -1,0 +1,53 @@
+{
+  "name": "Cours De Lor",
+  "doctype": "DocType",
+  "module": "Bijouterie App",
+  "custom": 1,
+  "is_submittable": 0,
+  "fields": [
+    {
+      "fieldname": "date",
+      "label": "Date",
+      "fieldtype": "Date",
+      "reqd": 1,
+      "default": "Today"
+    },
+    {
+      "fieldname": "price_per_gram",
+      "label": "Prix par gramme (DZD)",
+      "fieldtype": "Currency",
+      "reqd": 1,
+      "description": "Prix de l'or 18 carats par gramme en Dinars Algériens"
+    },
+    {
+      "fieldname": "margin_percentage",
+      "label": "Marge (%)",
+      "fieldtype": "Percent",
+      "reqd": 1,
+      "default": "20",
+      "description": "Pourcentage de marge à appliquer"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Text",
+      "description": "Remarques sur le cours du jour"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0
+    }
+  ]
+}

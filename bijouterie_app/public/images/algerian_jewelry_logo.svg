@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font-family: 'Noto Serif', serif; fill: #d4af37; font-size: 24px; }
+    .subtext { font-family: 'Noto Sans', sans-serif; fill: #006233; font-size: 14px; }
+    .diamond { fill: #d4af37; }
+    .crescent { fill: #006233; }
+    .star { fill: #d4af37; }
+  </style>
+  
+  <!-- Crescent and star (inspired by Algerian cultural symbols) -->
+  <path class="crescent" d="M25,10 A15,15 0 0,1 25,40 A10,10 0 0,0 25,20 A10,10 0 0,0 25,10" />
+  <polygon class="star" points="35,20 37,26 43,26 38,30 40,36 35,32 30,36 32,30 27,26 33,26" />
+  
+  <!-- Company name -->
+  <text x="50" y="25" class="text">Bijouterie</text>
+  
+  <!-- Tagline in French and Arabic -->
+  <text x="50" y="45" class="subtext">Artisanat d'Or • صناعة الذهب</text>
+</svg>

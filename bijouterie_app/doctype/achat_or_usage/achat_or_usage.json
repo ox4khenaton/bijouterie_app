@@ -1,0 +1,107 @@
+{
+  "name": "Achat Or Usage",
+  "doctype": "DocType",
+  "module": "Bijouterie App",
+  "custom": 1,
+  "is_submittable": 1,
+  "fields": [
+    {
+      "fieldname": "seller_name",
+      "label": "Nom du vendeur",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "seller_id",
+      "label": "Numéro d'identité",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "seller_address",
+      "label": "Adresse",
+      "fieldtype": "Text",
+      "reqd": 1
+    },
+    {
+      "fieldname": "seller_phone",
+      "label": "Téléphone",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "purchase_date",
+      "label": "Date d'achat",
+      "fieldtype": "Date",
+      "reqd": 1,
+      "default": "Today"
+    },
+    {
+      "fieldname": "gold_items_section",
+      "label": "Articles en or",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "gold_items",
+      "label": "Articles en or",
+      "fieldtype": "Table",
+      "options": "Achat Or Usage Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "total_weight",
+      "label": "Poids total (grammes)",
+      "fieldtype": "Float",
+      "precision": 3,
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_amount",
+      "label": "Montant total",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "payment_section",
+      "label": "Paiement",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "payment_method",
+      "label": "Méthode de paiement",
+      "fieldtype": "Select",
+      "options": "Espèces\nChèque\nVirement bancaire",
+      "reqd": 1
+    },
+    {
+      "fieldname": "payment_reference",
+      "label": "Référence de paiement",
+      "fieldtype": "Data",
+      "depends_on": "eval:doc.payment_method!='Espèces'"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1
+    },
+    {
+      "role": "Purchase User",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1,
+      "cancel": 1
+    }
+  ]
+}
